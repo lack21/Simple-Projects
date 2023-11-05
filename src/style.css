@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.count-section {
+  min-height: 100vh;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  background-color: hsla(180, 75%, 25%, 0.25);
+}
+.count-section .text {
+  font-size: 2rem;
+  color: darkslategrey;
+}
+.count-section .btns {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.25rem;
+}
+.count-section .btns .btn {
+  width: 120px;
+  padding: 0.75rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  font-size: 1rem;
+}
+.count-section .btns .btn:hover {
+  opacity: 0.8;
+}
+.count-section .btns .btn.plus-btn {
+  background-color: hsl(240, 65%, 50%);
+}
+.count-section .btns .btn.reset-btn {
+  background-color: hsl(0, 75%, 55%);
+}
+.count-section .btns .btn.minus-btn {
+  background-color: hsl(120, 70%, 30%);
+}
+
+.background-section {
+  background-color: black;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  place-content: center;
+  grid-gap: 4rem 6rem;
+}
+.background-section.red {
+  background-color: red;
+}
+.background-section.green {
+  background-color: green;
+}
+.background-section.blue {
+  background-color: blue;
+}
+.background-section.yellow {
+  background-color: yellow;
+}
+.background-section.orange {
+  background-color: orange;
+}
+.background-section.black {
+  background-color: black;
+}
+.background-section.pink {
+  background-color: pink;
+}
+.background-section.purple {
+  background-color: purple;
+}
+.background-section .box {
+  width: 120px;
+  height: 120px;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  outline: 0.1rem solid hsla(180, 75%, 25%, 0.25);
+  cursor: pointer;
+}
+.background-section .box:hover {
+  opacity: 0.9;
+}
+.background-section .box.red {
+  background-color: red;
+}
+.background-section .box.green {
+  background-color: green;
+}
+.background-section .box.blue {
+  background-color: blue;
+}
+.background-section .box.yellow {
+  background-color: yellow;
+}
+.background-section .box.orange {
+  background-color: orange;
+}
+.background-section .box.black {
+  background-color: black;
+}
+.background-section .box.pink {
+  background-color: pink;
+}
+.background-section .box.purple {
+  background-color: purple;
+}
+
+.alert-section {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: hsla(180, 75%, 25%, 0.25);
+  position: relative;
+  overflow-x: hidden;
+}
+.alert-section .warning-alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 1rem;
+  right: max(-100vw, -400px);
+  background-color: white;
+  width: min(400px, 100vw);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  box-shadow: 0 0 1rem rgba(120, 120, 120, 0.25);
+}
+.alert-section .warning-alert .text {
+  font-size: 1rem;
+}
+.alert-section .warning-alert .fa {
+  cursor: pointer;
+}
+.alert-section .warning-alert.show {
+  right: 1rem;
+}
+.alert-section .btn {
+  cursor: pointer;
+  border: none;
+  width: min(130px, 100vw);
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: hsl(0, 75%, 55%);
+  color: white;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+.alert-section .btn:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 868px) {
+  .background-section {
+    grid-template-columns: repeat(3, 120px);
+  }
+}
+@media screen and (max-width: 624px) {
+  .background-section {
+    grid-template-columns: repeat(2, 120px);
+    padding: 2.5rem 0;
+  }
+  .alert-section .warning-alert {
+    top: 0;
+  }
+  .alert-section .warning-alert.show {
+    right: 0;
+  }
+}
+@media screen and (max-width: 396px) {
+  .count-section .btns {
+    flex-direction: column;
+  }
+  .count-section .btns .btn {
+    width: 90vw;
+  }
+  .background-section {
+    grid-template-columns: 120px;
+  }
+}/*# sourceMappingURL=style.css.map */
