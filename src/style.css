@@ -176,6 +176,118 @@
   opacity: 0.9;
 }
 
+.todo-section {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: hsla(200, 100%, 25%, 0.25);
+  gap: 1rem;
+  padding: 2.5rem 0;
+}
+.todo-section .top-corner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.todo-section .top-corner .enter-input {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  border: 1px solid rgba(120, 120, 120, 0.25);
+  width: 260px;
+}
+.todo-section .top-corner .add-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid rgba(120, 120, 120, 0.25);
+  font-size: 1rem;
+  background-color: hsl(120, 70%, 30%);
+  color: white;
+  cursor: pointer;
+}
+.todo-section .top-corner .add-btn:hover {
+  opacity: 0.9;
+}
+.todo-section .tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.todo-section .tasks .task {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.todo-section .tasks .task .text {
+  width: 260px;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  border: 1px solid rgba(120, 120, 120, 0.25);
+}
+.todo-section .tasks .task .fa {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-content: center;
+  color: hsl(0, 75%, 55%);
+}
+
+.timer-section {
+  min-height: 100vh;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  background-color: hsla(180, 75%, 25%, 0.25);
+}
+.timer-section .text {
+  font-size: 2rem;
+  color: darkslategrey;
+}
+.timer-section .btns {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.25rem;
+}
+.timer-section .btns .btn {
+  width: 120px;
+  padding: 0.75rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  font-size: 1rem;
+}
+.timer-section .btns .btn:hover {
+  opacity: 0.8;
+}
+.timer-section .btns .btn.start-btn {
+  background-color: hsl(120, 70%, 30%);
+}
+.timer-section .btns .btn.reset-btn {
+  background-color: hsl(0, 75%, 55%);
+}
+.timer-section .btns .btn.pause-btn {
+  background-color: hsl(240, 65%, 50%);
+}
+
 @media screen and (max-width: 868px) {
   .background-section {
     grid-template-columns: repeat(3, 120px);

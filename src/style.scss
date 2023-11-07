@@ -14,6 +14,7 @@ $greenColor: hsl(120, 70%, 30%);
 $blueColor: hsl(240, 65%, 50%);
 $firstSectionBackground: hsla(180, 75%, 25%, 0.25);
 $lightGray: rgba(120, 120, 120, 0.25);
+$lightBlue: hsla(200, 100%, 25%, 0.25);
 
 // Count Section
 .count-section {
@@ -216,6 +217,135 @@ $lightGray: rgba(120, 120, 120, 0.25);
 
     &:hover {
       opacity: 0.9;
+    }
+  }
+}
+
+// Todo Section
+.todo-section {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: $lightBlue;
+  gap: 1rem;
+  padding: 2.5rem 0;
+
+  .top-corner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .enter-input {
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      -webkit-border-radius: 0.25rem;
+      -moz-border-radius: 0.25rem;
+      -ms-border-radius: 0.25rem;
+      -o-border-radius: 0.25rem;
+      border: 1px solid $lightGray;
+      width: 260px;
+    }
+
+    .add-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border: 1px solid $lightGray;
+      font-size: 1rem;
+      background-color: $greenColor;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .task {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .text {
+        width: 260px;
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+        -webkit-border-radius: 0.25rem;
+        -moz-border-radius: 0.25rem;
+        -ms-border-radius: 0.25rem;
+        -o-border-radius: 0.25rem;
+        border: 1px solid $lightGray;
+      }
+
+      .fa {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        display: grid;
+        place-content: center;
+        color: $redColor;
+      }
+    }
+  }
+}
+
+// Timer Section
+.timer-section {
+  min-height: 100vh;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  background-color: $firstSectionBackground;
+
+  .text {
+    font-size: 2rem;
+    color: darkslategrey;
+  }
+
+  .btns {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2.25rem;
+
+    .btn {
+      width: 120px;
+      padding: 0.75rem;
+      border: none;
+      cursor: pointer;
+      color: white;
+      border-radius: 0.25rem;
+      -webkit-border-radius: 0.25rem;
+      -moz-border-radius: 0.25rem;
+      -ms-border-radius: 0.25rem;
+      -o-border-radius: 0.25rem;
+      font-size: 1rem;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &.start-btn {
+        background-color: $greenColor;
+      }
+
+      &.reset-btn {
+        background-color: $redColor;
+      }
+
+      &.pause-btn {
+        background-color: $blueColor;
+      }
     }
   }
 }
