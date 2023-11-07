@@ -14,9 +14,7 @@ function Background() {
   ];
 
   function ChangeBackground(e: any) {
-    setBackgroundColor(
-      (backgroundColor) => (backgroundColor = e.target.classList[1])
-    );
+    setBackgroundColor(e.target.classList[1]);
   }
 
   return (
